@@ -1,0 +1,5 @@
+df1 <- read.csv("C:\\Users\\elegant\\Downloads\\data_set\\Data Cleaning of Reviews\\Extra & Test\\Agg_R_review.csv")
+df2 <- read.csv("C:\\Users\\elegant\\Downloads\\data_set\\Data Cleaning of Reviews\\Extra & Test\\Final Cleaned Data.csv")
+df3 <- merge(x = df2, y = df1, by = "App", all.x = TRUE)
+w1<- na.omit(df3)
+write.csv(w1, file = "Final_Data_Both_Review_and_Information.csv",row.names=FALSE)
